@@ -31,7 +31,9 @@ x Make sure the decode1 end result buttons aren't clickable at the wrong time
 */
 function preload() {
   images = {
-    logo: loadImage("data_in_colors.png")
+    logo: loadImage("data_in_colors.png"),
+    clickArrow0: loadImage("clickArrow0.png"),
+    clickArrow1: loadImage("clickArrow1.png"),
   }
   var imagesToLoad = "chevron-left chevron-right decode download encode file-audio file-document file-image file-video folder link file-webpage".split(" ")
   for(var i = 0; i < imagesToLoad.length; i ++){
@@ -132,11 +134,11 @@ function setupCanvas(){
 }
 
 function mousePressed(e){
-  if(e.button == 1)location.reload(); //reload when middle mouse button is down
-  
   mouse_x_at_press = mouseX;
   mouse_y_at_press = mouseY;
   time_of_last_mouse_press = millis();
+  
+  if(e.button == 1)location.reload();
 }
 function mouseReleased(){
   if(!loading_screen){
