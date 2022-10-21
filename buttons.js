@@ -360,6 +360,7 @@ function setupButtons(){
         //Make this button flash so first-time users know to press it
         var maxFillColor = []
         var increaseBy = map(sin( (frameCount*4) ), -1, 1, 0, 120)
+        increaseBy = 0;
         maxFillColor[0] = red(buttons.decode.color) + increaseBy;
         maxFillColor[1] = green(buttons.decode.color) + increaseBy;
         maxFillColor[2] = blue(buttons.decode.color) + increaseBy;
