@@ -131,7 +131,9 @@ function setupCanvas(){
   y_below_logo = logo_height + (pxSpacing*3)
 }
 
-function mousePressed(){
+function mousePressed(e){
+  if(e.button == 1)location.reload(); //reload when middle mouse button is down
+  
   mouse_x_at_press = mouseX;
   mouse_y_at_press = mouseY;
   time_of_last_mouse_press = millis();
