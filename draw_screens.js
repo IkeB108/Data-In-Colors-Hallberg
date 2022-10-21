@@ -19,6 +19,12 @@ function draw_decode1(){
     draw_input("image")
     buttonStyleSettings();
     drawButton(buttons.decode)
+    
+    let n = floor(frameCount / 20) % 2
+    let img = images["clickArrow" + n]
+    let w = width / 4
+    let h = img.height * (w/img.width)
+    image(img, width * 0.05, height * 0.9, w, h)
   }
   if(decoding_with_animation){
     draw_input("image")
