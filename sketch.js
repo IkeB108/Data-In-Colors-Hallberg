@@ -159,4 +159,9 @@ function mouseReleased(){
 function windowResized(){
   setupCanvas();
   setupButtons();
+  if(typeof willRefresh == "undefined"){
+    setTimeout( ()=> { location.reload(); }, 3000 )
+    console.log("Will refresh...")
+    willRefresh = true; 
+  }
 }
